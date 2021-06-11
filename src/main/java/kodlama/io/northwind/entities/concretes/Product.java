@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+
 @Data
 @Entity
 @Table(name = "products")
@@ -17,8 +18,8 @@ public class Product {
     @Column(name = "product_id")
     int id;
 
-    @Column(name = "category_id")
-    int categoryId;
+    //@Column(name = "category_id")
+    //int categoryId;
 
     @Column(name = "product_name")
     String productName;
@@ -31,5 +32,9 @@ public class Product {
 
     @Column(name = "quantityPerUnit")
     String quantityPerUnit;
+
+    @ManyToOne()
+    @JoinColumn(name = "category_id")
+    private Category category;
 
 }

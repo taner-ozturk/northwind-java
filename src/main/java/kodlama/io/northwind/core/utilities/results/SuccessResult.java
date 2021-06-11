@@ -1,6 +1,6 @@
 package kodlama.io.northwind.core.utilities.results;
 
-public class SuccessResult extends Result{
+public class SuccessResult extends Result {
 
     public SuccessResult() {
         super(true);
